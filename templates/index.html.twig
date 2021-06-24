@@ -1,0 +1,13 @@
+{% extends "base.twig" %}
+{% block title %}Чат{% endblock %}
+{% block content %}
+    <h1>Сообщения:</h1>
+
+    <ul style = "list-style: none">
+        {% for message in messages %}
+            <li>
+                <span><strong>{{message.LOGGIN}}:</strong> {{message.MESSAGE}}</span>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
